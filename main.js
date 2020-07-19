@@ -30,18 +30,18 @@ function generate(){
 
     for(i=0; i<REP; ++i)
     {
-	var curang=0,
-	    ang=Math.PI/(1<<(Math.floor(Math.random()*3)+2)); // 2
+	var nas=0,
+	    sir=Math.PI/(1<<(Math.floor(Math.random()*3)+2)); // 2
 	if(colored)
 	{
 	    color=Math.floor(Math.random()*16180339).toString(16); // 16777216
 	}
-	while(curang<2*Math.PI)
+	while(nas<2*Math.PI)
 	{
-	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang))+","+(RAD+d1[i]*Math.sin(curang))+" C "+(RAD+d2[i]*Math.cos(curang))+","+(RAD+d2[i]*Math.sin(curang))+" "+(RAD+d3[i]*Math.cos(curang+ang))+","+(RAD+d3[i]*Math.sin(curang+ang))+" "+(RAD+d4[i]*Math.cos(curang+ang))+" "+(RAD+d4[i]*Math.sin(curang+ang)) +" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"3.1416\" />\n"); // 2
-	    curang+=ang;
-	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang+ang))+","+(RAD+d1[i]*Math.sin(curang+ang))+" C "+(RAD+d2[i]*Math.cos(curang+ang))+","+(RAD+d2[i]*Math.sin(curang+ang))+" "+(RAD+d3[i]*Math.cos(curang))+","+(RAD+d3[i]*Math.sin(curang))+" "+(RAD+d4[i]*Math.cos(curang))+" "+(RAD+d4[i]*Math.sin(curang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"3.1416\" />\n"); // 2
-	    curang+=ang;
+	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir)) +" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"3.1416\" />\n"); // 2
+	    nas+=sir;
+	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"3.1416\" />\n"); // 2
+	    nas+=sir;
 	}
     }
 
@@ -62,18 +62,18 @@ function generate(){
 
     for(i=0; i<REP; ++i)
     {
-	curang=0;
-	ang=Math.PI/(1<<(Math.floor(Math.random()*3)+3));
+	nas=0;
+	sir=Math.PI/(1<<(Math.floor(Math.random()*3)+3));
 	if(colored)
 	{
 	    color=Math.floor(Math.random()*16777216).toString(16);
 	}
-	while(curang<2*Math.PI)
+	while(nas<2*Math.PI)
 	{
-	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang))+","+(RAD+d1[i]*Math.sin(curang))+" C "+(RAD+d2[i]*Math.cos(curang+ang))+","+(RAD+d2[i]*Math.sin(curang+ang))+" "+(RAD+d3[i]*Math.cos(curang+ang))+","+(RAD+d3[i]*Math.sin(curang+ang))+" "+(RAD+d4[i]*Math.cos(curang))+" "+(RAD+d4[i]*Math.sin(curang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"1.5708\" />\n"); // 2
-	    curang+=ang;
-	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang+ang))+","+(RAD+d1[i]*Math.sin(curang+ang))+" C "+(RAD+d2[i]*Math.cos(curang))+","+(RAD+d2[i]*Math.sin(curang))+" "+(RAD+d3[i]*Math.cos(curang))+","+(RAD+d3[i]*Math.sin(curang))+" "+(RAD+d4[i]*Math.cos(curang+ang))+" "+(RAD+d4[i]*Math.sin(curang+ang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"1.5708\" />\n"); // 2
-	    curang+=ang;
+	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"1.5708\" />\n"); // 2
+	    nas+=sir;
+	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"1.5708\" />\n"); // 2
+	    nas+=sir;
 	}
     }
 
@@ -142,18 +142,18 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 //     for(i=0; i<REP; ++i)
 //     {
-// 	var curang=0,
-// 	    ang=Math.PI/(1<<(Math.floor(Math.random()*3)+2));
+// 	var nas=0,
+// 	    sir=Math.PI/(1<<(Math.floor(Math.random()*3)+2));
 // 	if(colored)
 // 	{
 // 	    color=Math.floor(Math.random()*16777216).toString(16);
 // 	}
-// 	while(curang<2*Math.PI)
+// 	while(nas<2*Math.PI)
 // 	{
-// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang))+","+(RAD+d1[i]*Math.sin(curang))+" C "+(RAD+d2[i]*Math.cos(curang))+","+(RAD+d2[i]*Math.sin(curang))+" "+(RAD+d3[i]*Math.cos(curang+ang))+","+(RAD+d3[i]*Math.sin(curang+ang))+" "+(RAD+d4[i]*Math.cos(curang+ang))+" "+(RAD+d4[i]*Math.sin(curang+ang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
-// 	    curang+=ang;
-// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang+ang))+","+(RAD+d1[i]*Math.sin(curang+ang))+" C "+(RAD+d2[i]*Math.cos(curang+ang))+","+(RAD+d2[i]*Math.sin(curang+ang))+" "+(RAD+d3[i]*Math.cos(curang))+","+(RAD+d3[i]*Math.sin(curang))+" "+(RAD+d4[i]*Math.cos(curang))+" "+(RAD+d4[i]*Math.sin(curang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
-// 	    curang+=ang;
+// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
+// 	    nas+=sir;
+// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
+// 	    nas+=sir;
 // 	}
 //     }
 
@@ -174,18 +174,18 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 //     for(i=0; i<REP; ++i)
 //     {
-// 	curang=0;
-// 	ang=Math.PI/(1<<(Math.floor(Math.random()*3)+3));
+// 	nas=0;
+// 	sir=Math.PI/(1<<(Math.floor(Math.random()*3)+3));
 // 	if(colored)
 // 	{
 // 	    color=Math.floor(Math.random()*16777216).toString(16);
 // 	}
-// 	while(curang<2*Math.PI)
+// 	while(nas<2*Math.PI)
 // 	{
-// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang))+","+(RAD+d1[i]*Math.sin(curang))+" C "+(RAD+d2[i]*Math.cos(curang+ang))+","+(RAD+d2[i]*Math.sin(curang+ang))+" "+(RAD+d3[i]*Math.cos(curang+ang))+","+(RAD+d3[i]*Math.sin(curang+ang))+" "+(RAD+d4[i]*Math.cos(curang))+" "+(RAD+d4[i]*Math.sin(curang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
-// 	    curang+=ang;
-// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(curang+ang))+","+(RAD+d1[i]*Math.sin(curang+ang))+" C "+(RAD+d2[i]*Math.cos(curang))+","+(RAD+d2[i]*Math.sin(curang))+" "+(RAD+d3[i]*Math.cos(curang))+","+(RAD+d3[i]*Math.sin(curang))+" "+(RAD+d4[i]*Math.cos(curang+ang))+" "+(RAD+d4[i]*Math.sin(curang+ang))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
-// 	    curang+=ang;
+// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
+// 	    nas+=sir;
+// 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2\" />\n");
+// 	    nas+=sir;
 // 	}
 //     }
 
