@@ -79,13 +79,18 @@ nav {
     margin-left: 50px;
 }
 
-@media (width: 400px) {
+@media only screen and (max-width: 600px) {
     .mandala {
         display: flex;
         flex-direction: column-reverse;
-        margin: 1rem auto;
+    }
+    #container {
+        width: 100%;
     }
     nav {
-        margin-left: 0;
+        margin-top: 1rem;
+    }
+    nav button, a {
+        display: inline-block;
     }
 }
