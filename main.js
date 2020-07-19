@@ -1,4 +1,4 @@
-var WIDTH = 525, //500
+var WIDTH = 530, //500
     ORIGINAL = 2,
     ZEN = 108,
     GOLDEN = 1.618,
