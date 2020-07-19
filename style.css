@@ -50,6 +50,10 @@ a:hover, .btn:hover, button:hover {
     background-color: #1a3197;
 }
 
+.download:active {
+    background-color: #3155f1;
+}
+
 button {
     background-color: #222;
 }
@@ -63,7 +67,7 @@ a {
     max-width: 1020px;
     margin: 3.5rem auto;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 #container svg{
