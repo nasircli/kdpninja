@@ -1,4 +1,4 @@
-var WIDTH=520, //500
+var WIDTH=525, //500
     MAGIC = 1.618; // 2(original) // 108(zen) // 1.618(golden ratio) // 11(lotus) // 3.1416
 
     preheader="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
