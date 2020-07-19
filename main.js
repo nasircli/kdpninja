@@ -50,9 +50,9 @@ function generate(){
 	}
 	while(nas<2*Math.PI)
 	{
-	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir)) +" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2.5\" />\n"); // 2
+	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir)) +" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"3\" />\n"); // 2
 	    nas+=sir;
-	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"2.5\" />\n"); // 2
+	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"3\" />\n"); // 2
 	    nas+=sir;
 	}
     }
