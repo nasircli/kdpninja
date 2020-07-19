@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    font-size: 16px;
+    background-color: #222;
+}
+
+a, .btn, button {
+    display: block;
+    padding: 0.75em 1em;
+    font-size: 16px;
+    font-weight: bold;
+    background: #fff;
+    border: none;
+    width: 200px;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+a:focus, .btn:focus, button:focus {
+    outline: 0;
+}
+a:hover, .btn:hover, button:hover {
+    background-color: #3d3d3d;
+    cursor: pointer;
+}
+
+.download, .create:hover {
+    background-color: #3155f1;
+    width: 170px;
+}
+
+.create:active {
+	background-color: #1a3197;
+}
+
+.color:hover {
+    background-color: #e43838;
+}
+
+.download:hover  {
+    background-color: #1a3197;
+}
+
+button {
+    background-color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mandala {
+    display: flex;
+    max-width: 1020px;
+    margin: 3.5rem auto;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+#container svg{
+    width: 100%;
+}
+
+nav {
+    align-self: center;
+    margin-left: 50px;
+}
+
+@media (width: 400px) {
+    .mandala {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1rem auto;
+    }
+    nav {
+        margin-left: 0;
+    }
+}
