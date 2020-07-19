@@ -1,10 +1,22 @@
-var WIDTH=525, //500
-    MAGIC = 1.618; // 2(original) // 108(zen) // 1.618(golden ratio) // 11(lotus) // 3.1416
+var WIDTH = 525, //500
+    ORIGINAL = 2,
+    ZEN = 108,
+    GOLDEN = 1.618,
+    PI = 3.1416;
+    LOTUS = 11,
+    ONE = 1;
+    LUCKY = 7;
+    DAY = 24;
+    // YANTRAS = 7;
+
+
+    // NUM1 = GOLDEN;
+    // NUM2 = PI; // 2(original) // 108(zen) // 1.618(golden ratio) // 11(lotus) //  3.1416 (PI)
 
     preheader="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
     header="<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\""+WIDTH+"px\" height=\""+WIDTH+"px\" viewBox=\"0 0 "+WIDTH+" "+WIDTH+"\" enable-background=\"new 0 0 "+WIDTH+" "+WIDTH+"\" xml:space=\"preserve\">\n",
     footer="</svg>",
-    REP=Math.floor((Math.random()*4)+MAGIC), 
+    REP=Math.floor((Math.random()*4)+GOLDEN), //2
     colored=false,
     color="ffffff",
     d1=[],
@@ -63,7 +75,7 @@ function generate(){
     for(i=0; i<REP; ++i)
     {
 	nas=0;
-	sir=Math.PI/(1<<(Math.floor(Math.random()*3)+3));
+	sir=Math.PI/(1<<(Math.floor(Math.random()*3)+3)); //3
 	if(colored)
 	{
 	    color=Math.floor(Math.random()*16777216).toString(16);
@@ -73,7 +85,7 @@ function generate(){
 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas))+","+(RAD+d1[i]*Math.sin(nas))+" C "+(RAD+d2[i]*Math.cos(nas+sir))+","+(RAD+d2[i]*Math.sin(nas+sir))+" "+(RAD+d3[i]*Math.cos(nas+sir))+","+(RAD+d3[i]*Math.sin(nas+sir))+" "+(RAD+d4[i]*Math.cos(nas))+" "+(RAD+d4[i]*Math.sin(nas))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"1.5708\" />\n"); // 2
 	    nas+=sir;
 	    mandala+=("<path d=\"M "+(RAD+d1[i]*Math.cos(nas+sir))+","+(RAD+d1[i]*Math.sin(nas+sir))+" C "+(RAD+d2[i]*Math.cos(nas))+","+(RAD+d2[i]*Math.sin(nas))+" "+(RAD+d3[i]*Math.cos(nas))+","+(RAD+d3[i]*Math.sin(nas))+" "+(RAD+d4[i]*Math.cos(nas+sir))+" "+(RAD+d4[i]*Math.sin(nas+sir))+" Z\" stroke=\"black\" fill=\"#"+color+"\" stroke-width=\"1.5708\" />\n"); // 2
-	    nas+=sir;
+        nas+=sir;
 	}
     }
 
