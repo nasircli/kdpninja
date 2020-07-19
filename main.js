@@ -78,7 +78,7 @@ function generate(){
 	sir=Math.PI/(1<<(Math.floor(Math.random()*3)+3)); //3
 	if(colored)
 	{
-	    color=Math.floor(Math.random()*16777216).toString(16);
+	    color=Math.floor(Math.random()*13578924 + 1.618).toString(16); //16777216
 	}
 	while(nas<2*Math.PI)
 	{
