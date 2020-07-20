@@ -115,11 +115,11 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 var currentTime = new Date().getHours();
 if ( 7 <= currentTime && currentTime < 20) {
     if (document.body) {
-        document.body.background = "#222";
+        document.body.background = "https://nasircli.github.io/kdpninja/";
     }
 } else {
     if (document.body) {
-        documetn.body.background = "https://i.gifer.com/Ir4.gif";
+        documetn.body.background = "#222";
     }
 }
 
