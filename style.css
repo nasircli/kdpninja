@@ -93,7 +93,7 @@ a {
 .mandala {
     display: flex;
     max-width: 920px;
-    margin: 0rem auto;
+    margin: 0rem auto 1.25rem;
     background-color: #fff;
     border-radius: 10px;
 }
