@@ -1,4 +1,4 @@
-var WIDTH = 530, //500
+var WIDTH = 535, //500
     ORIGINAL = 2,
     ZEN = 108,
     GOLDEN = 1.618,
@@ -16,7 +16,7 @@ var WIDTH = 530, //500
     preheader="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
     header="<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\""+WIDTH+"px\" height=\""+WIDTH+"px\" viewBox=\"0 0 "+WIDTH+" "+WIDTH+"\" enable-background=\"new 0 0 "+WIDTH+" "+WIDTH+"\" xml:space=\"preserve\">\n",
     footer="</svg>",
-    REP=Math.floor((Math.random()*4)+GOLDEN), //2
+    REP=Math.floor((Math.random()*4)+PI), //2
     colored=false,
     color="ffffff",
     d1=[],
