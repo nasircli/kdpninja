@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
+  <body onload="startTime()">
     <h1 class="title">❀ Mandala Creator ❀</h1>
+    <div id="clockdate">
+      <div class="clockdate-wrapper">
+        <div id="clock"></div>
+        <div id="date"></div>
+      </div>
+    </div>
     <div class="mandala">
       <div id="container"></div>
       <nav>
@@ -28,7 +34,8 @@
             <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
           </form>
         </div>
-        <div class="creator text-center">Made with ❤ by <a target="_blank" class="footer-author" href="https://www.creativefabrica.com/designer/kdp-ninja/ref/242292?action=follow">KDP Ninja</a></div>
+        <div class="creator text-center">Made with ❤ by <a target="_blank" class="footer-author"
+            href="https://www.creativefabrica.com/designer/kdp-ninja/ref/242292?action=follow">KDP Ninja</a></div>
       </nav>
     </div>
     <script src="main.js"></script>
