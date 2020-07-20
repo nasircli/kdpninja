@@ -32,14 +32,17 @@ body {
     text-align: right;
 }
 
+button {
+    width: 200px;
+}
+
 a.download, a.btn, button {
     display: block;
     padding: 0.80em 1em;
     font-size: 16px;
     font-weight: bold;
-    background: #fff;
+    background: #222;
     border: none;
-    width: 200px;
     text-align: left;
     margin-bottom: 10px;
     color: #fff;
@@ -55,29 +58,37 @@ a:hover, .btn:hover, button:hover {
     cursor: pointer;
 }
 
-a.download, .create:hover {
+.download:hover, .create:hover {
     background-color: #3155f1;
     width: 168px;
 }
 
-.create:active {
+.download:active, .create:active {
 	background-color: #1a3197;
 }
 
 .color:hover {
-    background-color: #e43838;
+    background-color: #c82626;
 }
 
-.download:hover  {
-    background-color: #1a3197;
+.color:active {
+    background-color: #971717;
 }
 
-.download:active {
-    background-color: #3155f1;
+.svgToPng {
+    background-color: #eee !important;
+    color: #222 !important;
+    border: 2px solid #222 !important;
 }
 
-button {
-    background-color: #222;
+.svgToPng:hover {
+    background-color: #222 !important;
+    color: #fff !important;
+}
+
+.svgToPng:active {
+    background-color: #fff !important;
+    color: #222 !important;
 }
 
 a {
