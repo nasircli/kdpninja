@@ -1,18 +1,38 @@
 * {
     margin: 0;
     padding: 0;
+    transition: all .3s;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     line-height: 1.2;
     font-size: 16px;
-    background-color: #222;
+    background-color: #000;
 }
 
-a, .btn, button {
+.title {
+    text-align: center;
+    color: #fff;
+    margin-top: .75rem;
+}
+
+/* Alignment */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+a.download, a.btn, button {
     display: block;
-    padding: 0.75em 1em;
+    padding: 0.80em 1em;
     font-size: 16px;
     font-weight: bold;
     background: #fff;
@@ -33,9 +53,9 @@ a:hover, .btn:hover, button:hover {
     cursor: pointer;
 }
 
-.download, .create:hover {
+a.download, .create:hover {
     background-color: #3155f1;
-    width: 170px;
+    width: 168px;
 }
 
 .create:active {
@@ -64,10 +84,10 @@ a {
 
 .mandala {
     display: flex;
-    max-width: 1020px;
-    margin: 3.5rem auto;
+    max-width: 920px;
+    margin: .75rem auto;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 #container svg{
@@ -77,6 +97,37 @@ a {
 nav {
     align-self: center;
     margin-left: 50px;
+}
+
+.donate {
+    /* background-color: #f5f5f5; */
+    padding: 1rem;
+    border-radius: 3px;
+    opacity: .25;
+    transition: all .3s;
+    margin-top: 1rem;
+}
+
+.donate:hover {
+    opacity: 1;
+}
+
+.creator {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: .25rem;
+}
+a.footer-author {
+    background-color: #f1f1f1;
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 6px;
+    color: #aaa;
+}
+
+a.footer-author:hover {
+    background-color: #222;
+    color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
