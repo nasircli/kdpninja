@@ -4,19 +4,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KDP Ninja Tools</title>
+    <title>Mandala Creator by KDP Ninja</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
+    <h1 class="title">Mandala Creator</h1>
     <div class="mandala">
       <div id="container"></div>
       <nav>
         <button class="create" onclick="generate()">Create</button>
         <a id="download" class="btn download">Download</a>
-        <button class="color" onclick="toggleColor()">Color</button>
-        <br></br>
-        <div class="donate">
+        <button class="color" onclick="toggleColor()">Toggle Color</button>
+        </br>
+        <div class="donate text-center">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations" />
             <input type="hidden" name="business" value="RMWJUT9V3MTDA" />
@@ -27,6 +28,7 @@
             <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
           </form>
         </div>
+        <div class="creator text-center">Made with ❤ by <a target="_blank" class="footer-author" href="https://www.creativefabrica.com/designer/kdp-ninja/ref/242292?action=follow">KDP Ninja</a></div>
       </nav>
     </div>
     <script src="main.js"></script>
