@@ -8,7 +8,8 @@ body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     line-height: 1.2;
     font-size: 16px;
-    background-color: #000;
+    background-color: #222;
+    background-image: url("https://i.gifer.com/Ir4.gif");
 }
 
 .title {
