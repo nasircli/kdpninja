@@ -1,61 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .3s;
+}
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mandala Maker by KDP Ninja</title>
-    <link rel="stylesheet" href="style.css">
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=848061222242766&autoLogAppEvents=1" nonce="XkWkMRzE"></script>
-  </head>
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    font-size: 16px;
+    background-color: #222;
+    /* background-image: url("https://i.gifer.com/Ir4.gif"); */
+}
 
-  <body onload="startTime()">
-    <h1 class="title">❀ Mandala Maker ❀</h1>
-    <div id="clockdate">
-      <div class="clockdate-wrapper">
-        <div id="clock"></div>
-        <div id="date"></div>
-      </div>
-    </div>
-    <div class="mandala">
-      <div id="container"></div>
-      <nav>
-        <button class="create" onclick="generate()">Make</button>
-        <a id="download" class="btn download">Download</a>
-        <button class="color" onclick="toggleColor()">Color</button>
-        <a class="btn svgToPng" target="_blank" href="https://image.online-convert.com/convert/svg-to-png">SVG
-          <span>⮞</span> PNG</a>
-        </br>
-        <div class="donate text-center">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_donations" />
-            <input type="hidden" name="business" value="RMWJUT9V3MTDA" />
-            <input type="hidden" name="item_name" value="Support" />
-            <input type="hidden" name="currency_code" value="USD" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
-              name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
-          </form>
-        </div>
-        <div class="creator text-center">Made with ❤ by <a target="_blank" class="footer-author"
-            href="https://www.creativefabrica.com/designer/kdp-ninja/ref/242292?action=follow">KDP Ninja</a></div>
-        <div class="fb-widget">
-          <div class="fb-like" data-href="https://www.facebook.com/kdpninja" data-width="200px" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
-        </div>
-      </nav>
-    </div>
+.title {
+    text-align: center;
+    color: #fff;
+    margin-top: .75rem;
+    margin-bottom: .7rem;
+}
 
-    <script src="main.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172936115-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+/* Alignment */
+.text-center {
+    text-align: center;
+}
 
-      gtag('config', 'UA-172936115-1');
-    </script>
+.text-left {
+    text-align: left;
+}
 
-  </body>
+.text-right {
+    text-align: right;
+}
 
-</html>
+button {
+    width: 200px;
+}
+
+a.download, a.btn, button {
+    display: block;
+    padding: 0.80em 1em;
+    font-size: 16px;
+    font-weight: bold;
+    background: #222;
+    border: none;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+a:focus, .btn:focus, button:focus {
+    outline: 0;
+}
+a:hover, .btn:hover, button:hover {
+    background-color: #3d3d3d;
+    cursor: pointer;
+}
+
+.download:hover, .create:hover {
+    background-color: #3155f1;
+    width: 168px;
+}
+
+.download:active, .create:active {
+	background-color: #1a3197;
+}
+
+.color:hover {
+    background-color: #da2b2b;
+}
+
+.color:active {
+    background-color: #971717;
+}
+
+.svgToPng {
+    background-color: #fff !important;
+    color: #222 !important;
+    border: 2px solid #222 !important;
+}
+
+.svgToPng:hover {
+    background-color: #222 !important;
+    color: #fff !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mandala {
+    display: flex;
+    max-width: 920px;
+    margin: 0rem auto 1.25rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#container svg{
+    width: 100%;
+    padding: .1rem;
+}
+
+nav {
+    align-self: center;
+    margin-left: 50px;
+}
+
+.donate {
+    /* background-color: #f5f5f5; */
+    padding: 1rem;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all .5s;
+    margin-top: 1rem;
+}
+
+.donate:hover {
+    opacity: 1;
+}
+
+.creator {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: .25rem;
+}
+a.footer-author {
+    background-color: #f1f1f1;
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 6px;
+    color: #aaa;
+}
+
+a.footer-author:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Clock */
+.clockdate-wrapper {
+    max-width:350px;
+    width:100%;
+    text-align:center;
+    margin:0 auto;
+    margin-bottom: 1rem;
+}
+#clock{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 1px #fff;
+    color:#fff;
+}
+#clock span {
+    color:#888;
+    text-shadow:0px 0px 1px #333;
+    font-size: 1rem;
+    position:relative;
+    top:-.5rem;
+    left: -.25rem;
+}
+#date {
+    letter-spacing: .25rem;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+    margin-top: .25rem;
+}
+
+.fb-widget {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .mandala {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #container {
+        width: 100%;
+    }
+    nav {
+        margin-top: 1rem;
+    }
+    nav button, a {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .title {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+}
