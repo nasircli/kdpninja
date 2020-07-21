@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandala Maker by KDP Ninja</title>
     <link rel="stylesheet" href="style.css">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=848061222242766&autoLogAppEvents=1" nonce="XkWkMRzE"></script>
   </head>
 
   <body onload="startTime()">
@@ -22,7 +23,8 @@
         <button class="create" onclick="generate()">Make</button>
         <a id="download" class="btn download">Download</a>
         <button class="color" onclick="toggleColor()">Color</button>
-        <a class="btn svgToPng" target="_blank" href="https://image.online-convert.com/convert/svg-to-png">SVG <span>⮞</span> PNG</a>
+        <a class="btn svgToPng" target="_blank" href="https://image.online-convert.com/convert/svg-to-png">SVG
+          <span>⮞</span> PNG</a>
         </br>
         <div class="donate text-center">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -37,29 +39,11 @@
         </div>
         <div class="creator text-center">Made with ❤ by <a target="_blank" class="footer-author"
             href="https://www.creativefabrica.com/designer/kdp-ninja/ref/242292?action=follow">KDP Ninja</a></div>
+        <div class="fb-widget">
+          <div class="fb-like" data-href="https://www.facebook.com/kdpninja" data-width="200px" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+        </div>
       </nav>
     </div>
-
-    <!-- Facebook Messanger -->
-    <div class="fb-customerchat" page_id="102155711556550" minimized="true">
-    </div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '571770790158496',
-          autoLogAppEvents: true,
-          xfbml: true,
-          version: 'v2.11'
-        });
-      };
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
 
     <script src="main.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
